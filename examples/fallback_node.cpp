@@ -145,12 +145,12 @@ You entered the room. Congrats!
 # Third scenario...
 The door is closed.
 Door was unable to open because it's locked!
+You smashed the door, but it didn't move a bit.
 
 # Fourth scenario...
 The door is closed.
 Door was unable to open because it's locked!
 Door unlocked!
 Door opened!
-You smashed the door, but it didn't move a bit.
 You entered the room. Congrats!
 */
