@@ -1,5 +1,5 @@
 # TinyBehaviorTree
-An experimental C++17 header only library to support behavior tree in minimal footprint
+An experimental C++14 header only library to support behavior tree in minimal footprint
 
 
 ## Overview
