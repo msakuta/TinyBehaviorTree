@@ -33,7 +33,7 @@ public:
             return BehaviorResult::SUCCESS;
         }
         else{
-            std::cout << "Door was unabled to open because it's locked!\n";
+            std::cout << "Door was unable to open because it's locked!\n";
             return BehaviorResult::FAILURE;
         }
     }
@@ -59,7 +59,7 @@ class SmashDoor : public BehaviorNode<Door&> {
 public:
     BehaviorResult tick(Door& door) override {
         std::cout << "You smashed the door, but it didn't move a bit.\n";
-        return BehaviorResult::SUCCESS;
+        return BehaviorResult::FAILURE;
     }
 };
 
@@ -100,7 +100,8 @@ int main()
                 tryUnlockNode->addChild(wrapPeelAgent(std::make_unique<HaveKey>()));
                 tryUnlockNode->addChild(wrapPeelDoor(std::make_unique<UnlockDoor>()));
                 tryUnlockNode->addChild(wrapPeelDoor(std::make_unique<OpenDoor>()));
-        tryOpenDoorNode->addChild(std::move(tryUnlockNode));
+            tryOpenDoorNode->addChild(std::move(tryUnlockNode));
+        tryOpenDoorNode->addChild(wrapPeelDoor(std::make_unique<SmashDoor>()));
     rootNode->addChild(std::move(tryOpenDoorNode));
     rootNode->addChild(std::make_unique<EnterRoom>());
 
@@ -139,12 +140,13 @@ You entered the room. Congrats!
 
 # Third scenario...
 The door is closed.
-Door was unabled to open because it's locked!
+Door was unable to open because it's locked!
 
 # Fourth scenario...
 The door is closed.
-Door was unabled to open because it's locked!
+Door was unable to open because it's locked!
 Door unlocked!
 Door opened!
+You smashed the door, but it didn't move a bit.
 You entered the room. Congrats!
 */

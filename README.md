@@ -166,6 +166,14 @@ And the output of `tree.tickRoot()` will be:
     leftArm
     rightArm
 
+## FallbackNode
+
+We can compose Fallback node as well.
+Here is a more complex example with Fallback node,
+which you can find the source code in [examples/fallback_node.cpp](examples/fallback_node.cpp).
+
+![image](images/FallbackNode.png)
+
 ## Non-goals
 
 * Full-featured behavior tree for production
