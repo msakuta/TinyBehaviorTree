@@ -25,9 +25,8 @@ protected:
 template<typename... Payload>
 class BehaviorNode : public BehaviorNodeBase {
 public:
-	using This = BehaviorNode<Payload...>;
-	This(){}
-	This(const This&) = delete;
+	BehaviorNode(){}
+	BehaviorNode(const BehaviorNode&) = delete;
 	virtual BehaviorResult tick(Payload...) = 0;
 };
 
@@ -36,8 +35,8 @@ class SequenceNode : public BehaviorNode<Payload...> {
 public:
 	SequenceNode(){}
 	SequenceNode(const SequenceNode&) = delete;
-	void addChild(std::unique_ptr<This>&& node) {
-		setParent(&*node, this);
+	void addChild(std::unique_ptr<BehaviorNode<Payload...>>&& node) {
+		BehaviorNodeBase::setParent(&*node, this);
 		children.push_back(std::move(node));
 	}
 	BehaviorResult tick(Payload... payload) override {
@@ -50,7 +49,7 @@ public:
 		return BehaviorResult::SUCCESS;
 	}
 protected:
-	std::vector<std::unique_ptr<This>> children;
+	std::vector<std::unique_ptr<BehaviorNode<Payload...>>> children;
 };
 
 template<typename... Payload>
@@ -58,8 +57,8 @@ class FallbackNode : public BehaviorNode<Payload...> {
 public:
 	FallbackNode(){}
 	FallbackNode(const FallbackNode&) = delete;
-	void addChild(std::unique_ptr<This>&& node) {
-		setParent(&*node, this);
+	void addChild(std::unique_ptr<BehaviorNode<Payload...>>&& node) {
+		BehaviorNodeBase::setParent(&*node, this);
 		children.push_back(std::move(node));
 	}
 	BehaviorResult tick(Payload... payload) override {
@@ -72,7 +71,7 @@ public:
 		return BehaviorResult::FAILURE;
 	}
 protected:
-	std::vector<std::unique_ptr<This>> children;
+	std::vector<std::unique_ptr<BehaviorNode<Payload...>>> children;
 };
 
 
@@ -84,7 +83,7 @@ public:
 		return tickTuple(TuplePayload(payload...));
 	}
 
-	virtual BehaviorResult tickTuple(TuplePayload&) = 0;
+	virtual BehaviorResult tickTuple(const TuplePayload&) = 0;
 };
 
 // Template metaprogramming helpers to unpack tuple into argument list
@@ -110,8 +109,8 @@ public: \
 		child = std::move(node); \
 	} \
 \
-	std::tuple<sub> peel(TuplePayload& payload) { \
-		return func; \
+	std::tuple<sub> peel(const TuplePayload& payload) { \
+		return std::tuple<SubPayload...> func; \
 	} \
 \
 	template<int ...S>\
@@ -120,7 +119,7 @@ public: \
 		return child->tick(std::get<S>(params) ...); \
 	} \
 \
-	BehaviorResult tickTuple(TuplePayload& payload) override { \
+	BehaviorResult tickTuple(const TuplePayload& payload) override { \
 		auto peeled = peel(payload); \
 		return callFunc(typename Gens_<sizeof...(SubPayload)>::type(), peeled); \
 	} \

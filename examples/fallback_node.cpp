@@ -108,21 +108,25 @@ int main()
     BehaviorTree<Agent&, Door&> tree;
     tree.setRoot(std::move(rootNode));
 
+    auto tryScenario = [&tree](Agent agent, Door door){
+        tree.tickRoot(agent, door);
+    };
+
     // The easiest case. The door is open.
     std::cout << "\n# First scenario...\n";
-    tree.tickRoot(Agent{ false }, Door{ true, false } );
+    tryScenario(Agent{ false }, Door{ true, false });
 
     // The door has been closed, you need to open it before entering.
     std::cout << "\n# Second scenario...\n";
-    tree.tickRoot(Agent{ false }, Door{ false, false } );
+    tryScenario(Agent{ false }, Door{ false, false } );
 
     // Oh shit, the door has been locked!
     std::cout << "\n# Third scenario...\n";
-    tree.tickRoot(Agent{ false }, Door{ false, true } );
+    tryScenario(Agent{ false }, Door{ false, true } );
 
     // We got a key!
     std::cout << "\n# Fourth scenario...\n";
-    tree.tickRoot(Agent{ true }, Door{ false, true } );
+    tryScenario(Agent{ true }, Door{ false, true } );
 
     return 0;
 }
