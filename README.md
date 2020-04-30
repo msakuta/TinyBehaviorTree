@@ -11,8 +11,8 @@ but tries to avoid overhead and make the tree as compact as possible.
 
 BehaviorTreeCPP has a lot of housekeeping variables in each node, which makes even the
 simplest node have hundreds of bytes.
-It was over 400 bytes in my particular implementation (Visual Studio 2019).
-On the other hand, a node in this library merely have 16 bytes at minimum in a 64 bit computer.
+It was 480 bytes in my particular implementation (Visual Studio 2019).
+On the other hand, a node in this library merely has minimum 16 bytes (2 pointers) in a 64 bit computer.
 Of course it would be bigger if you have additional features like subnodes.
  
 Another problem is that it's not easy to pass around common variables among multiple nodes.

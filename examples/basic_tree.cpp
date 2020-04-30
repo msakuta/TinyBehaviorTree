@@ -1,4 +1,4 @@
-#include "../include/tinybehaviortree/tinybehaviortree.h"
+#include "tinybehaviortree/tinybehaviortree.h"
 
 
 #include <string>

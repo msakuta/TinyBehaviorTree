@@ -53,6 +53,28 @@ protected:
 	std::vector<std::unique_ptr<This>> children;
 };
 
+template<typename... Payload>
+class FallbackNode : public BehaviorNode<Payload...> {
+public:
+	FallbackNode(){}
+	FallbackNode(const FallbackNode&) = delete;
+	void addChild(std::unique_ptr<This>&& node) {
+		setParent(&*node, this);
+		children.push_back(std::move(node));
+	}
+	BehaviorResult tick(Payload... payload) override {
+		for (auto it = children.begin(); it != children.end(); ++it) {
+			auto& node = *it;
+			auto result = node->tick(payload...);
+			if(result == BehaviorResult::SUCCESS)
+				return BehaviorResult::SUCCESS;
+		}
+		return BehaviorResult::FAILURE;
+	}
+protected:
+	std::vector<std::unique_ptr<This>> children;
+};
+
 
 template<typename... Payload>
 class PeelNodeBase : public BehaviorNode<Payload...> {
