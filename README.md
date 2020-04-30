@@ -159,6 +159,8 @@ The tree structure will be:
     * PeelRightNode
       * PrintArmNode
 
+![image](images/LeftRightArm.png)
+
 And the output of `tree.tickRoot()` will be:
 
     leftArm
