@@ -16,7 +16,7 @@
    id="svg8"
    inkscape:version="0.92.1 r15371"
    sodipodi:docname="FallbackNode.svg"
-   inkscape:export-filename="..\images\LeftRightArm.png"
+   inkscape:export-filename="..\images\FallbackNode.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96">
   <defs
@@ -283,9 +283,9 @@
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
      inkscape:cx="465.31203"
-     inkscape:cy="447.53525"
+     inkscape:cy="476.45738"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g6022-2"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
@@ -366,47 +366,6 @@
        style="fill:none;stroke:#000000;stroke-width:0.5291667;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker5179)"
        d="M 21.166668,191.16667 V 201.75"
        id="path5175"
-       inkscape:connector-curvature="0" />
-    <rect
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.31799981;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect4487-5-3"
-       width="47.625"
-       height="21.166668"
-       x="187.85417"
-       y="117.08334" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="190.87798"
-       y="124.45385"
-       id="text4491-3-3"><tspan
-         sodipodi:role="line"
-         id="tspan4489-5-2"
-         x="190.87798"
-         y="124.45385"
-         style="stroke-width:0.26458332">PeelRightArm</tspan></text>
-    <rect
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.31799984;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect4487-5-4-1"
-       width="47.625"
-       height="10.583324"
-       x="187.85417"
-       y="148.83337" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="198.24852"
-       y="155.82593"
-       id="text4491-3-0-5"><tspan
-         sodipodi:role="line"
-         id="tspan4489-5-3-6"
-         x="198.24852"
-         y="155.82593"
-         style="stroke-width:0.26458332">PrintArm</tspan></text>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.52916676;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker5179-7)"
-       d="m 211.66666,138.25 v 10.58333"
-       id="path5175-5"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.52916676;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend-7)"
@@ -556,30 +515,6 @@
          x="76.729164"
          y="249.56398"
          style="font-size:4.23333311px;stroke-width:0.26458332">agent</tspan></text>
-    <g
-       id="g5618-3-7"
-       transform="translate(103.1875,-74.083331)">
-      <rect
-         ry="1.7638888"
-         rx="1.7638888"
-         y="201.75"
-         x="95.25"
-         height="7.9375"
-         width="26.458328"
-         id="rect5575-3-6"
-         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <text
-         id="text4491-8-1-2"
-         y="206.85268"
-         x="99.21875"
-         style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-         xml:space="preserve"><tspan
-           style="font-size:4.23333311px;stroke-width:0.26458332"
-           y="206.85268"
-           x="99.21875"
-           id="tspan4489-7-1-0"
-           sodipodi:role="line">rightArm</tspan></text>
-    </g>
     <g
        id="g6042"
        transform="translate(-26.458329,-15.874993)">
@@ -996,5 +931,62 @@
        id="path4535-3-6-5"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="csc" />
+    <g
+       id="g6022-2"
+       transform="translate(100.54167,-15.875)">
+      <rect
+         y="132.95833"
+         x="89.958328"
+         height="31.75001"
+         width="42.333332"
+         id="rect4487-2"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.29981321;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         id="text4491-0"
+         y="139.38394"
+         x="94.872025"
+         style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.26458332"
+           y="139.38394"
+           x="94.872025"
+           id="tspan4489-78"
+           sodipodi:role="line">EnterRoom</tspan></text>
+      <g
+         transform="translate(2.6458369,-52.91667)"
+         id="g5618-02">
+        <rect
+           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect5575-6"
+           width="26.458332"
+           height="15.874998"
+           x="95.25"
+           y="199.10417"
+           rx="1.7638888"
+           ry="1.7638888" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+           x="99.785713"
+           y="204.9628"
+           id="text4491-8-9"><tspan
+             sodipodi:role="line"
+             id="tspan4489-7-46"
+             x="99.785713"
+             y="204.9628"
+             style="font-size:4.23333311px;stroke-width:0.26458332">agent</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+           x="99.407738"
+           y="212.14435"
+           id="text4491-8-8-0"><tspan
+             sodipodi:role="line"
+             id="tspan4489-7-7-5"
+             x="99.407738"
+             y="212.14435"
+             style="font-size:4.23333311px;stroke-width:0.26458332">door</tspan></text>
+      </g>
+    </g>
   </g>
 </svg>
